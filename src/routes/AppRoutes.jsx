@@ -1,8 +1,8 @@
-import App from "./App";
+import App from "../App";
 // import Profile from "./Profile";
-import ErrorPage from "./ErrorPage";
+import ErrorPage from "../pages/ErrorPage";
 
-const routes = [
+const AppRoutes = [
   {
     path: "/",
     element: <App />,
@@ -15,4 +15,4 @@ const routes = [
   //   },
 ];
 
-export default routes;
+export default AppRoutes;
