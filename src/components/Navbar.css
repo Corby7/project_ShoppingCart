@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 40px 80px;
   height: 60px;
-  background-color: navy;
+}
+
+.leftside {
+  display: flex;
+  align-items: center;
+  gap: 80px;
 }
 
 .nav-links {
@@ -15,7 +20,8 @@
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -29,4 +35,8 @@
 
 .logo img {
   height: 40px;
+}
+
+.cart-icon {
+  color: black;
 }

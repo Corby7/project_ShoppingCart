@@ -1,7 +1,8 @@
 import App from "../App";
 import HomePage from "../pages/HomePage";
 import ErrorPage from "../pages/ErrorPage";
-import ShoppingPage from "../pages/ShoppingPage";
+import StorePage from "../pages/StorePage";
+import ShoppingBagPage from "../pages/ShoppingBagPage";
 
 const AppRoutes = [
   {
@@ -9,7 +10,8 @@ const AppRoutes = [
     element: <App />,
     children: [
       { path: "", element: <HomePage /> },
-      { path: "shopping", element: <ShoppingPage /> },
+      { path: "store", element: <StorePage /> },
+      { path: "bag", element: <ShoppingBagPage /> },
     ],
     errorElement: <ErrorPage />,
   },
