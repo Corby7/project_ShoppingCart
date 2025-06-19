@@ -1,11 +1,28 @@
 import { ArrowLeft, CircleX, Minus, Plus } from "lucide-react";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import { useState, useEffect } from "react";
+import OrderSummary from "../components/OrderSummary";
 import "./ShoppingBagPage.css";
 
 export default function ShoppingBagPage() {
+  const navigate = useNavigate();
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
     useOutletContext();
-  const navigate = useNavigate();
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
+
+  useEffect(() => {
+    const total = cartItems.reduce((sum, item) => {
+      return sum + item.price * item.quantity;
+    }, 0);
+
+    const quantity = cartItems.reduce((sum, item) => {
+      return sum + item.quantity;
+    }, 0);
+
+    setTotalPrice(total);
+    setTotalQuantity(quantity);
+  }, [cartItems]);
 
   return (
     <>
@@ -46,6 +63,7 @@ export default function ShoppingBagPage() {
                     <Plus size={14} />
                   </button>
                 </div>
+                <h4>${product.quantity * product.price}</h4>
                 <button
                   className="removefrombag-btn"
                   onClick={() => removeFromCart(product)}
@@ -56,6 +74,10 @@ export default function ShoppingBagPage() {
             ))}
           </ul>
         )}
+        <OrderSummary
+          totalPriceExcl={totalPrice}
+          totalQuantity={totalQuantity}
+        />
       </div>
     </>
   );

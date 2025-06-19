@@ -1,0 +1,13 @@
+.ordersummary-container {
+  background-color: green;
+  width: 80%;
+  padding: 20px;
+  color: white;
+  align-self: center;
+  border-radius: 15px;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+}
