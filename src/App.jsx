@@ -28,12 +28,42 @@ export default function App() {
     });
   };
 
+  const increaseQuantity = (product) => {
+    setCartItems((prev) => {
+      return prev.map((item) =>
+        item.id == product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    });
+  };
+
+  const decreaseQuantity = (product) => {
+    setCartItems((prev) => {
+      return prev.map((item) => {
+        if (item.id == product.id) {
+          if (item.quantity <= 1) {
+            return item;
+          }
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
+    });
+  };
+
   return (
     <>
       <div className="app-container">
         <Navbar cartCount={cartItems.length} />
         <main>
-          <Outlet context={{ cartItems, addToCart, removeFromCart }} />
+          <Outlet
+            context={{
+              cartItems,
+              addToCart,
+              removeFromCart,
+              increaseQuantity,
+              decreaseQuantity,
+            }}
+          />
         </main>
         <Footer />
       </div>

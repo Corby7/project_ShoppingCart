@@ -37,6 +37,26 @@
   height: 40px;
 }
 
+.cart-link {
+  position: relative;
+}
+
 .cart-icon {
   color: black;
+}
+
+.cart-count {
+  position: absolute;
+  top: -18px;
+  right: -15px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
