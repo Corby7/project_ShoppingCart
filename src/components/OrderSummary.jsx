@@ -10,21 +10,26 @@ export default function OrderSummary({
   return (
     <div className="ordersummary-container">
       <h2>Order summary</h2>
-      <h2>${totalPriceIncl.toFixed(2)}</h2>
-      <span>
-        <h4>Subtotal ({totalQuantity} items)</h4>
-        <h4>${totalPriceExcl.toFixed(2)}</h4>
+      <h2>₽{totalPriceIncl.toFixed(2)}</h2>
+      <span className="sub-vat">
+        <span className="left-right">
+          <h5>Subtotal ({totalQuantity} items)</h5>
+          <h5>₽{totalPriceExcl.toFixed(2)}</h5>
+        </span>
+        <span className="left-right">
+          <h5>Vat (21%)</h5>
+          <h5>₽{vatAmount.toFixed(2)}</h5>
+        </span>
+        <hr />
+        <span className="left-right">
+          <h2>Total</h2>
+          <h2>₽{totalPriceIncl.toFixed(2)}</h2>
+        </span>
       </span>
-      <span>
-        <h4>Vat (21%)</h4>
-        <h4>${vatAmount.toFixed(2)}</h4>
-      </span>
-      <hr />
-      <span>
-        <h2>Total</h2>
-        <h2>${totalPriceIncl.toFixed(2)}</h2>
-      </span>
-      <button>Checkout</button>
+
+      <button id="checkout-btn">
+        <h3>Checkout</h3>
+      </button>
     </div>
   );
 }

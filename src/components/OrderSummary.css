@@ -1,13 +1,27 @@
 .ordersummary-container {
-  background-color: green;
-  width: 80%;
+  background-color: var(--color-100);
+  width: 100%;
   padding: 20px;
-  color: white;
-  align-self: center;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-span {
+.sub-vat {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-right {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+#checkout-btn {
+  padding: 10px;
+  background-color: blue;
+  border-radius: var(--default-border-radius);
+  color: white;
 }

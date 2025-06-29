@@ -1,8 +1,8 @@
 .shoppingbag-page {
   width: 100%;
-  padding: 0px 80px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .backbutton {
@@ -18,46 +18,12 @@
   background-color: var(--color-100);
 }
 
+ul {
+  padding: 0;
+}
+
 .items-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.item img {
-  height: 80px;
-}
-
-.quantity-control {
-  display: flex;
-  align-items: center;
   gap: 10px;
-}
-
-.removefrombag-btn,
-.minusquantity-btn,
-.plusquantity-btn {
-  display: flex;
-  border: none;
-  background: none;
-  padding: 10px;
-}
-
-.removefrombag-btn:hover,
-.minusquantity-btn:hover,
-.plusquantity-btn:hover {
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: var(--color-100);
-}
-
-.removefrombag-btn {
-  color: crimson;
 }

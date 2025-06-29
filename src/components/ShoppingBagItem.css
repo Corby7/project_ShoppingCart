@@ -1,0 +1,56 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 20px;
+  background-color: var(--color-100);
+  border-radius: var(--default-border-radius);
+}
+
+.item-left {
+  gap: 40px;
+}
+
+.item-right {
+  gap: 40px;
+}
+
+.item img {
+  overflow: hidden;
+}
+
+#pokemon-price {
+  color: var(--color-400);
+}
+
+.quantity-total {
+  gap: 20px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.removefrombag-btn,
+.minusquantity-btn,
+.plusquantity-btn {
+  display: flex;
+  border: none;
+  background: none;
+  padding: 10px;
+}
+
+.removefrombag-btn:hover,
+.minusquantity-btn:hover,
+.plusquantity-btn:hover {
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--color-200);
+}
+
+.removefrombag-btn {
+  color: crimson;
+}

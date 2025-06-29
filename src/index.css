@@ -13,6 +13,18 @@
 
   --color-100: rgb(245, 245, 245, 1);
   --color-200: #e5e5e5;
+  --color-400: #a3a3a3;
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 24px;
+  --font-3xl: 30px;
+  --font-4xl: 36px;
+
+  --default-border-radius: 8px;
 }
 
 html,
@@ -21,4 +33,48 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-2xl);
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+h3 {
+  font-size: var(--font-lg);
+}
+
+h4 {
+  font-size: var(--font-base);
+}
+
+h5 {
+  font-size: var(--font-sm);
+  font-weight: normal;
+}
+
+h6 {
+  font-size: var(--font-xs);
+  font-weight: normal;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+#pokemon-name {
+  text-transform: capitalize;
 }
